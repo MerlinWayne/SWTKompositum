@@ -12,8 +12,8 @@ public class Directory {
 		System.out.println("directory " + name + " created!");
 	}
 	
-	public void removeDirectory(){
-		//toDo
+	public void removeDirectory(Directory directory){
+		directory = null;   //the garbage collector will remove the obj. if they are no other references!
 	}
 	
 	public String getDirectory(){

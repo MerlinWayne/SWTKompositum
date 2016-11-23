@@ -13,8 +13,8 @@ public class File {
 	}
 	
 	
-	public void removeFile(){
-		
+	public void removeFile(File file){
+		file = null;            //the garbage collector will remove the obj. if they are no other references!
 	}
 	
 	public String getFile(){

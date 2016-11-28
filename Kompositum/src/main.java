@@ -1,7 +1,10 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class main {
 
-	public static void main(String args[]) {
+	public static void main(String args[]) throws IOException {
 		
 		
 		Directory directory1 = new Directory("directory1");
@@ -24,8 +27,18 @@ public class main {
 		
 		System.out.println(directory1);
 		
+		try(  PrintWriter out = new PrintWriter( "filename.txt" )  ){
+		    out.println( "this is a test" );
+		}
 		
-		
+		/*
+		 digraph Test { graph [rankdir=LR]; {Verz1 [shape = folder]} -> {a [label = "Dat1"]} 
+		 {Verz1 [shape = folder]} -> {Verz2 [shape = folder]} {Verz2 [shape = folder]} -> 
+		 {b [label = "Dat2"]} {Verz2 [shape = folder]} -> {Verz3 [shape = folder]} {Verz3 [shape = folder]}
+		  -> {e [label = "Dat1"]} {Verz3 [shape = folder]} -> {c [label = "Dat4"]} {Verz3 [shape = folder]}
+		   -> {d [label = "Dat5"]} }
+		*/
+						
 	}
 
 }

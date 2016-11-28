@@ -1,20 +1,33 @@
+import java.util.ArrayList;
 
 public abstract class Component {
 
-	private File file;
-	private Directory directory;
+	private ArrayList<File> files = new ArrayList<File>();
+	private ArrayList<Directory> directories = new ArrayList<Directory>();
 	
-	public Component() {
-		File file;
-		Directory directory;		
+	
+	public ArrayList<File> getFile(){
+		return files;
 	}
 	
-	public File getFile(){
-		return file;
+	public ArrayList<Directory> getDirectory(){
+		return directories;
 	}
 	
-	public Directory getDirectory(){
-		return directory;
+	public void insertDirectory(Directory directory){
+		directories.add(directory);
+	}
+	
+	public void insertFile(File file){
+		files.add(file);
+	}
+	
+	public void removeDirectory(Directory directory){
+		directories.remove(directory);		
+	}
+	
+	public void removeFile(File file){
+		files.remove(file);
 	}
 
 }

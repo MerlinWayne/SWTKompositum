@@ -1,14 +1,17 @@
+import java.util.ArrayList;
 
 public class File {
 	
 	private String name;
+	private ArrayList<File> files = new ArrayList<File>();
 	
 	public File(String n){
 		this.name = n;
 	}
 	
-	public void insert(String n){
+	public void insertFile(String n){
 		File file = new File(n);
+		files.add(file);
 		System.out.println("file " + n + " created!");
 	}
 	

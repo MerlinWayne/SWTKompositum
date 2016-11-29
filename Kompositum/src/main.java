@@ -16,7 +16,7 @@ public class main {
 		File file4 = new File("file4");
 		File file5 = new File("file5");
 		
-		System.out.println(directory1.name + "\n");
+		System.out.println(directory1.name);
 		directory1.insertFile(file1);
 		directory1.insertDirectory(directory2);
 		directory2.insertFile(file2);

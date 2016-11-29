@@ -20,17 +20,23 @@ public class Directory {
 	
 	public void insertDirectory(Directory directory){
 		directories.add(directory);
-		System.out.println(directory.name + "\n");
+		System.out.println(directory.name);
 	}
 	
 		public void removeDirectory(Directory directory){
-		directories.remove(directory);		
+			if(directories.contains(directory)){
+				directories.remove(directory);
+			}
+			else throw new MyException("sructure harmed !");		
 	}
 		
 		
 	
 	public void removeFile(File file){
-		files.remove(file);
+		if(files.contains(file)){
+			files.remove(file);			
+		}
+		else throw new MyException("sructure harmed !");
 	}
 
 	public ArrayList<File> getFile(){

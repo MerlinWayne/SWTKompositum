@@ -20,6 +20,7 @@ public class Directory {
 	
 	public void insertDirectory(Directory directory){
 		directories.add(directory);
+		System.out.println(directory.name);
 	}
 	
 		public void removeDirectory(Directory directory){
@@ -37,7 +38,8 @@ public class Directory {
 	}
 		
 	public void insertFile(File file){
-		files.add(file);		
+		files.add(file);	
+		System.out.println(file.name);
 	}
 	
 

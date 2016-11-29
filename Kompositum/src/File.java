@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class File {
 	
-	private String name;
+	public String name;
 	
 	
 	public File(String n){

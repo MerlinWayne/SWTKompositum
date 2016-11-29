@@ -25,7 +25,6 @@ public class main {
 		directory3.insertFile(file4);
 		directory3.insertFile(file5);
 		
-		System.out.println(directory1);
 		
 		try(  PrintWriter out = new PrintWriter( "filename.txt" )  ){
 		    out.println( "this is a test" );

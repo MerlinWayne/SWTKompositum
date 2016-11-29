@@ -1,6 +1,5 @@
-import java.util.ArrayList;
 
-public class File {
+public class File {   //rename file
 	
 	protected String name;
 	

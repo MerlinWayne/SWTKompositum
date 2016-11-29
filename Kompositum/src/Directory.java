@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Directory {
 	
-	private String name;
+	protected String name;
 	private ArrayList<File> files = new ArrayList<File>();
 	private ArrayList<Directory> directories = new ArrayList<Directory>();
 	
@@ -20,7 +20,7 @@ public class Directory {
 	
 	public void insertDirectory(Directory directory){
 		directories.add(directory);
-		System.out.println(directory.name);
+		System.out.println(directory.name + "\n");
 	}
 	
 		public void removeDirectory(Directory directory){

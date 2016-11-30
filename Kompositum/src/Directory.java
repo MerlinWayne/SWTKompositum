@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Directory {
+public class Directory implements FileDoc {
 	
 	protected String name;
 	private ArrayList<File> files = new ArrayList<File>();
@@ -19,11 +19,21 @@ public class Directory {
 	
 	
 	public void insertDirectory(Directory directory){
-		directories.add(directory);
-		System.out.println(directory.name);
+		if(directories.isEmpty()){
+			directories.add(directory);
+			System.out.println(directory.name);			
+		}
+		else {
+			for(int i=0; i <= directories.size(); i++){
+				System.out.print("  ");
+			}
+			directories.add(directory);
+			System.out.println(directory.name);
+		}
 	}
 	
-		public void removeDirectory(Directory directory){
+	
+	public void removeDirectory(Directory directory){
 			if(directories.contains(directory)){
 				directories.remove(directory);
 			}
@@ -45,8 +55,13 @@ public class Directory {
 		
 	public void insertFile(File file){
 		files.add(file);	
-		System.out.println(file.name);
+		System.out.println("_" + file.name);
 	}
 	
+	
+	@Override
+	public void accept(Visitor visitor){
+		visitor.visit(this);
+	}
 
 }

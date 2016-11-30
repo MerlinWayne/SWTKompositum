@@ -1,5 +1,5 @@
 
-public class File {   //rename file
+public class File implements FileDoc {   //rename file
 	
 	protected String name;
 	
@@ -8,4 +8,8 @@ public class File {   //rename file
 		this.name = n;
 	}
 	
+	@Override
+	public void accept(Visitor visitor){
+		visitor.visit(this);
+	}
 }
